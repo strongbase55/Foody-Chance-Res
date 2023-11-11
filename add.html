@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance</title>
+    <script src="https://apis.google.com/js/client.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        label {
+            cursor: pointer;
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="radio"]:checked+label {
+            background-color: green;
+            /* Change to green when present */
+            color: #fff;
+        }
+
+        input[type="radio"]:checked+label.absent {
+            background-color: red;
+            /* Change to red when absent */
+            color: #fff;
+        }
+
+        .but {
+            padding: 10px 20px;
+            background: springgreen;
+            color: black;
+            font-weight: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="logout()">LogOut</button>
+    <table>
+        <tr>
+            <th>Student Roll Number</th>
+            <th>Present</th>
+            <th>Absent</th>
+        </tr>
+        <tr>
+            <td>204E1A0567</td>
+            <td><input type="radio" id="student1_present" name="student1_attendance"><label
+                    for="student1_present">Present</label></td>
+            <td><input type="radio" id="student1_absent" name="student1_attendance"><label for="student1_absent"
+                    class="absent">Absent</label></td>
+        </tr>
+        <tr>
+            <td>204E1A0568</td>
+            <td><input type="radio" id="student2_present" name="student2_attendance"><label
+                    for="student2_present">Present</label></td>
+            <td><input type="radio" id="student2_absent" name="student2_attendance"><label for="student2_absent"
+                    class="absent">Absent</label></td>
+        </tr>
+        <tr>
+            <td>204E1A0567</td>
+            <td><input type="radio" id="student3_present" name="student3_attendance"><label
+                    for="student3_present">Present</label></td>
+            <td><input type="radio" id="student3_absent" name="student3_attendance"><label for="student3_absent"
+                    class="absent">Absent</label></td>
+        </tr>
+        <tr>
+            <td>204E1A0568</td>
+            <td><input type="radio" id="student4_present" name="student4_attendance"><label
+                    for="student4_present">Present</label></td>
+            <td><input type="radio" id="student4_absent" name="student4_attendance"><label for="student4_absent"
+                    class="absent">Absent</label></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit" onclick="storeData()">
+            </td>
+            <!-- <td>
+                <input type="submit"value="Next Section"class="but">
+            </td>
+            <td>
+                <input type="submit"value="Close"class="but">
+            </td> -->
+        </tr>
+    </table>
+
+    <script>
+        function logout() {
+            window.location.href = "login.html"
+        }
+    </script>
+    <script>
+        // Initialize the Google Sheets API client
+        function initClient() {
+            gapi.client.init({
+                apiKey: 'AIzaSyCVG3_lBuxIMsxYmCRKuADsnrrpu-md0Nw',
+                discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
+            }).then(function () {
+                // Client is initialized, you can now call API functions
+            });
+        }
+
+        // Load the API client
+        gapi.load('client', initClient);
+
+        // Function to store data
+        function storeData() {
+            // Get student name, present/absent status
+            const studentName = document.getElementById('student1').textContent;
+            const present = document.querySelector('#student1_present:checked') !== null;
+            const absent = document.querySelector('#student1_absent:checked') !== null;
+
+            // Create a 2D array with data
+            const data = [
+                [studentName, present ? 'Present' : absent ? 'Absent' : '']
+            ];
+
+            // The ID of the spreadsheet
+            const spreadsheetId = '392287039674-ngi5bmvcbo6nvnh4lo94u9mpu6bsd5b9.apps.googleusercontent.com';
+
+            // The name of the sheet where you want to append data
+            const sheetName = 'Sheet1';
+
+            // Append the data to the Google Sheet
+            gapi.client.sheets.spreadsheets.values.append({
+                spreadsheetId: spreadsheetId,
+                range: sheetName,
+                valueInputOption: 'RAW',
+                insertDataOption: 'INSERT_ROWS',
+                values: data
+            }).then(function (response) {
+                console.log('Data appended to Google Sheet:', response);
+            }, function (error) {
+                console.error('Error appending data:', error);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
