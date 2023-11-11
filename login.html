@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN page</title>
+
+    <style>
+        #username {
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Login</h1>
+    <form>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="enter your username">
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="please enter your password" id="password">
+        <input type="button" value="submit" onclick="auth()">
+    </form>
+
+    <script src="login.js"></script>
+
+    <script>
+        function auth() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+          
+            if (user === "foody chance" && pass === "welcome") {
+              window.location.href = "foody-chance.html";
+            } else {
+              window.alert("Invalid Password or Username");
+            }
+          }
+          
+    </script>
+</body>
+
+</html>

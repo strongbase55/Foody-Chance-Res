@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Nosifer&display=swap');
+
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background: #000;
+    overflow-x: hidden;
+
+}
+
+header {
+    min-height: 100vh;
+    max-width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVyZ2VyfGVufDB8fDB8fHww%27);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+
+}
+
+.navbar {
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+
+    font-weight: 1000;
+    font-size: 20px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    transition: .5s;
+    border-radius: 20px;
+    background: #000;
+}
+
+ul li a:hover {
+    background: rgb(94, 36, 105);
+    border-radius: 20px;
+    color: white;
+}
+
+.content {
+    min-height: 50vh;
+    text-align: left;
+    margin-left: 300px;
+    color: white;
+
+    margin: 10px;
+
+    display: flex;
+
+    padding-left: 30px;
+    flex-direction: column;
+
+    align-items: start;
+    justify-content: end;
+}
+
+h1 {
+    font-style: 80px;
+}
+
+arjun {
+    color: rgb(218, 98, 98);
+    font-size: 100px;
+    font-weight: 1000;
+    font-variant: small-caps;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 2px rgb(218, 98, 98);
+    font-family: 'Nosifer', sans-serif;
+}
+
+.helllo:first-letter {
+    color: White;
+    font-size: 100px;
+}
+
+span:first-child {
+    color: white;
+}
+
+.direct-buttons {
+    margin-top: 50px;
+}
+
+.direct-buttons a {
+    text-decoration: none;
+    padding: 15px 30px;
+    background: springgreen;
+    border-radius: 20px;
+    color: black;
+    font-weight: 1000;
+    font-variant: small-caps;
+    letter-spacing: 1.5px;
+    transition: .5s;
+    margin: 10px;
+
+}
+
+.direct-buttons a:hover {
+    background: rgb(10, 59, 59);
+    color: white;
+    font-weight: 1000;
+}
+
+span1 {
+    letter-spacing: 16px;
+}
+
+.about {
+
+    min-height: 100vh;
+    max-width: 100%;
+    background: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.about-img img {
+    height: 350px;
+    width: 250px;
+    border-radius: 20px;
+    transition: .5s;
+    opacity: .5;
+}
+
+
+.about-img img:hover {
+    opacity: 1;
+}
+
+/* 
+.about-img img:hover{
+    transform: skewY(360deg);
+} */
+.about-container {
+    min-height: 50vh;
+    max-width: 92%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1px;
+    padding: 10px;
+    gap: 50px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+.about-content {
+    height: 400px;
+    max-width: 100%;
+
+}
+
+.about-para {
+    width: 500px;
+}
+
+.about-heading h1 {
+
+    color: rgb(0, 0, 0);
+
+    font-size: 37px;
+
+    font-weight: 600;
+
+    font-variant: small-caps;
+
+    font-family: 'Nosifer', sans-serif;
+}
+
+.small-text p {
+    color: aqua;
+    font-style: italic;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 1000;
+}
+
+.about-para p {
+    color: rgb(0, 0, 0);
+    /* font-size: 20px; */
+    /* word-spacing: 0; */
+    /* line-height: 30px; */
+    width: 66%;
+    padding: 10px;
+    text-align: justify;
+}
+
+.about-buttons {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #000;
+    color: white;
+    border-radius: 20px;
+    margin: 10px;
+    transition: .5s;
+}
+
+.about-buttons a:hover {
+
+    background: purple;
+    border-radius: 0px;
+    color: black;
+}
+
+/* ---------services section ---------- */
+
+
+.services {
+    min-height: 100vh;
+    max-width: 100%;
+    background: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-container {
+    min-height: 70vh;
+    max-width: 100%;
+    background: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.service-title h1 {
+    text-align: center;
+    font-size: 80px;
+    color: blueviolet;
+    font-variant: small-caps;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 2px springgreen;
+}
+
+.service-cards {
+    height: 300px;
+    width: 350px;
+    /* background: deeppink; */
+    background: rgb(182, 34, 250);
+    border: 1px solid rgb(204, 139, 139);
+    box-shadow: 1px 1px 2px 1px rgb(177, 177, 177);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    transition: .5s;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+#first-card:hover {
+    background-image: linear-gradient(rgba(207, 155, 155, 0.5), rgba(225, 225, 225, .5)), url(https://www.airborneinternational.in/assets/door-to-door.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#second-card:hover {
+    background-image: url(https://cdn.vectorstock.com/i/preview-1x/08/01/quality-service-banner-design-vector-24420801.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#third-card:hover {
+    background-image: url(https://media.istockphoto.com/id/637765812/photo/cuisine-culinary-buffet-dinner-catering-dining-food-celebration.jpg?s=612x612&w=0&k=20&c=7l_HRkrBJ6ewkfYx1rQtNbDDWcf4V8dyo1GbiHmWGYs=);
+    background-position: center;
+    background-size: cover;
+}
+
+#fourth-card:hover {
+    background-image: url(https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+#fifth-card:hover {
+    background-image: url(https://www.indianhealthyrecipes.com/wp-content/uploads/2021/03/snacks-recipes-fb.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#sixth-card:hover {
+    background-image: url(https://img.freepik.com/free-vector/special-offer-creative-sale-banner-design_1017-16284.jpg?1);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.service-card-title h1 {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: 1000;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.service-details p {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-style: italic;
+    line-height: 25px;
+    word-spacing: 1.5px;
+}
+
+.service-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: black;
+    background: aqua;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.service-buttons a:hover {
+    color: aqua;
+    background: #000;
+}
+
+/* ------------ food showcase section=-------------7 */
+
+.food-showcase {
+    min-height: 100vh;
+    max-width: 100%;
+    background-color: pink;
+}
+
+.food-title {
+    /* margin-top: 50px; */
+    padding-top: 50px;
+}
+
+.food-showcase h1 {
+    color: #000;
+    font-size: 40px;
+    text-align: center;
+}
+
+.food-card {
+    min-height: 350px;
+    width: 300px;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+    gap: 40px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.food-img img {
+    height: 200px;
+    width: 300px;
+    border: 2px solid rgb(116, 19, 107);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.food-name h2 {
+    color: white;
+    font-style: italic;
+    font-weight: 1000;
+    font-variant: small-caps;
+    font-size: 25px;
+    /* padding-left: 30px; */
+    margin-top: 30px;
+}
+
+/* .food-rating {
+    padding-left: 30px;
+} */
+
+.checked {
+    color: yellow;
+}
+
+.food-cost {
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    /* padding-left: 25px; */
+    background: rgb(255, 0, 43);
+    text-align: center;
+
+    /* adding the animation to the food cost  */
+
+    animation: price 1s infinite;
+
+}
+
+
+/* 
+@keyframes price {
+
+    0% {
+        background: rgb(255, 178, 11);
+        border-radius: 1px;
+        transform: scale(1.1);
+    }
+
+    10% {
+        background: rgb(255, 0, 0);
+        transform: scale(1.4);
+
+    }
+
+    20% {
+        background: rgb(75, 255, 4);
+        transform: scale(1.9);
+
+        border-radius: 2px;
+
+    }
+
+    30% {
+        background: rgb(2, 255, 107);
+    }
+
+    40% {
+        background: rgb(47, 0, 255);
+        border-radius: 03px;
+
+    }
+
+    50% {
+        background: rgb(77, 0, 0);
+    }
+
+    60% {
+        background: rgb(35, 3, 37);
+        border-radius: 4px;
+
+    }
+
+    70% {
+        background: rgb(7, 41, 24);
+    }
+
+    80% {
+        background: rgb(66, 54, 14);
+        border-radius: 5px;
+
+    }
+
+    90% {
+        background: rgb(69, 25, 95);
+    }
+
+    100% {
+        background: rgb(116, 43, 138);
+        border-radius: 20px;
+
+    }
+} */
+
+
+@keyframes price {
+
+    form {
+
+        background: pink;
+        transform: scale(1.2);
+    }
+
+    to {
+        background: blue;
+
+        transform: scale(2);
+    }
+}
+
+.food-buttons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.food-buttons a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: aqua;
+    transition: .5s;
+    text-align: center;
+    margin: .5px;
+}
+
+.food-buttons a:hover {
+    background: violet;
+    color: black;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.food-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+
+/* testimonials section */
+
+
+.testimonials {
+    min-height: 100vh;
+    max-width: 100%;
+    background: pink;
+    overflow-x: hidden;
+
+}
+
+.testimonials-title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.testimonials-title h1 {
+    color: black;
+    font-style: italic;
+    font-size: 50px;
+    font-variant: small-caps;
+    letter-spacing: 1.6px;
+    text-align: center;
+}
+
+.testimonials-img img {
+    height: 100px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.testimonials-container {
+    min-height: 100vh;
+    max-width: 100%;
+    background: pink;
+
+    /* grid  */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, 350px);
+    justify-content: center;
+    padding-bottom: 50px;
+    margin-left: 2em;
+}
+
+
+
+
+.testimonials-cards {
+    min-height: 300px;
+    max-width: 300px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 1px 2px 10px 1px black;
+}
+
+.testimonials-feedbacks p {
+    text-align: justify;
+}
+
+
+
+
+
+/*  media quries */
+
+
+@media(max-width:768px) {
+
+    header {
+        background-size: cover;
+    }
+
+    arjun {
+        font-size: 35px;
+    }
+
+
+
+}
+
+
+@media(max-width:400px) {
+    header {
+        background-image: none;
+    }
+}
+
+arjun {
+    font-style: italic;
+}

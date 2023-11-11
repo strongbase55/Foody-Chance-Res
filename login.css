@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #000;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 100%;
+    background: pink;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+form {
+    min-height: 400px;
+    width: 400px;
+    background: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+input{
+    border:2px solid deeppink;
+    padding:10px 20px;
+    border-radius: 20px;
+}
+/* #username{
+    background-color: yellow;
+} */
+
+
+label{
+    color: #000;
+    font-size:30px;
+    font-weight: 1000;
+
+}
